@@ -4,11 +4,15 @@
 import sys, os
 from dotenv import load_dotenv
 
-
-
+#Check if someone runs this as main script
 if (__name__ == "__main__"):
     print("ERROR: Bad entry point. Run startBot.py instead")
     sys.exit(1)
+
+#Logging module
+from TestingBot.Log import BotLog
+
+
     
 #Function to load env variables from .env and convert them to disctionary    
 def loadParameters() -> dict:
@@ -25,8 +29,8 @@ def loadParameters() -> dict:
     
     #Load cogs into dict
     _loadCogs(parameters)
-    
-    print("INFO: Loading parameters complete")
+
+    BotLog.info("Loading parameters complete")
     return parameters
     
 
@@ -44,14 +48,12 @@ def _loadCogs(dict_: dict) -> None:
 #Internal Function to load Env variables    
 def _loadEnv(dict_: dict) -> None:
     
-    #Load env variables from .env file using library
-    load_dotenv()
     
     #Loading Discord Token
     if os.environ.get('DISCORD_TOKEN') is not None:
         dict_["discordToken"] = os.getenv('DISCORD_TOKEN')
     else:
-        print("CRITICAL: Discord Token does not exist, exitting")
+        BotLog.critical("Discord Token does not exist, exitting")
         sys.exit(1)
 
     #Loading Bungie Token
@@ -59,11 +61,11 @@ def _loadEnv(dict_: dict) -> None:
         dict_["bungieToken"] = os.getenv('BUNGIE_TOKEN')
     else:
         #Todo implement handling
-        print("CRITICAL: BUNGIE Token does not exist")
+        BotLog.critical("BUNGIE Token does not exist")
     
     #Loading default bot prefix
     if os.environ.get('DEFAULT_PREFIX') is not None:
         dict_["prefix"] = os.getenv('DEFAULT_PREFIX')
     else:
-        print("WARNING: Default token not specified defaulting to '?'")
+        BotLog.warning("WARNING: Default token not specified defaulting to '?'")
         dict_["prefix"] = "?"

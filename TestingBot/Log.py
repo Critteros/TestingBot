@@ -238,6 +238,7 @@ class BotLog:
     @classmethod
     def _initInternalLogger(cls,*,level=logging.DEBUG):
         cls._internalLogger = logging.getLogger("discord")
+        cls._internalLogger.setLevel(level)
 
         # Formatted logger output
         fmt = "%(asctime)s | %(name)s[%(process)d] %(levelname)s: %(message)s"
