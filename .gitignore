@@ -5,3 +5,5 @@ activateEnv.bat
 __pycache__
 startBot.bat
 zTests.py
+client.log
+internal-discord.log
