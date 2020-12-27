@@ -1,15 +1,19 @@
 #This file is the entry point for the bot and root of all python scripts
 
+#Load .env
+from dotenv import load_dotenv
+load_dotenv()
+
+
 #Standard imports
 import discord, sys, asyncio, os
 from discord.ext import commands
 
 #Helpers
 from TestingBot.start_helper import loadParameters
-from dotenv import load_dotenv
+
 
 #Logger module
-load_dotenv()
 from TestingBot.Log import BotLog
 
 
