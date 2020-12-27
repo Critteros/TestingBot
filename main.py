@@ -7,6 +7,8 @@ import sys
 import coloredlogs
 import asyncio
 
+async def example():
+    print("Hello")
 
 #Conteiner for the Bot instance
 Bot = None
@@ -14,16 +16,17 @@ Bot = None
 #Main function and entry point for the bot
 def main() -> None:
     
-    logger = log.getLogger('discord')
+    #logger = log.getLogger('discord')
     #handler = log.StreamHandler(sys.stdout)
     #handler.setFormatter(log.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
     
-    coloredlogs.install(fmt="%(asctime)s:%(levelname)s:%(name)s: %(message)s",level="DEBUG", logger=logger)
+    #coloredlogs.install(fmt="%(asctime)s:%(levelname)s:%(name)s: %(message)s",level="DEBUG", logger=logger)
     #logger.setLevel(log.DEBUG)
     #logger.addHandler(handler)
     
     #Initialize Bot
     initBot()
+    #asyncio.create_task(example())
     
     #Run async loop
     Bot.run()

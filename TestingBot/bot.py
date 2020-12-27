@@ -14,7 +14,7 @@ class BotClass(commands.Bot):
 
         #Retriving discord Token from parameters
         self.__DiscordToken = parameters.get('discordToken')
-        
+
         #Load cogs
         for cog_ in parameters.get('cogs'):
             self.load_extension(cog_)

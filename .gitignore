@@ -3,3 +3,5 @@
 .env
 activateEnv.bat
 __pycache__
+startBot.bat
+zTests.py

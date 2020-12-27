@@ -1,0 +1,11 @@
+[37m2020-12-27 19:46:53[0m | [38;5;214mTestingBot[0m[[38;5;90m10200[0m] [1;30mDEBUG:[0m [90mFinieshed intialization of Logger[0m
+[37m2020-12-27 19:46:53[0m | [38;5;214mTestingBot[0m[[38;5;90m10200[0m] [1;30mDEBUG:[0m [90mExample debug[0m
+[37m2020-12-27 19:46:53[0m | [38;5;214mTestingBot[0m[[38;5;90m10200[0m] [1;30mINFO:[0m Example info
+[37m2020-12-27 19:46:53[0m | [38;5;214mTestingBot[0m[[38;5;90m10200[0m] [1;30mWARNING:[0m [33mExample warning[0m
+[37m2020-12-27 19:46:53[0m | [38;5;214mTestingBot[0m[[38;5;90m10200[0m] [1;30mERROR:[0m [31mExample error[0m
+[37m2020-12-27 19:46:53[0m | [38;5;214mTestingBot[0m[[38;5;90m10200[0m] [1;30mCRITICAL:[0m [1;38;5;16;41mExample critical[0m
+INFO: Starting up..
+DEBUG: Preparing to load parameters
+CRITICAL: BUNGIE Token does not exist
+WARNING: Default token not specified defaulting to '?'
+INFO: Loading parameters complete
