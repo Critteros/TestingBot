@@ -192,8 +192,14 @@ class BotLog:
         # Formatted logger output
         fmt = "%(asctime)s | %(name)s[%(process)d] %(levelname)s: %(message)s"
         
+        #If Logs directory does not exist
+        try:
+            os.mkdir("Logs")
+        except OSError:
+            pass
+        
         #Create STDOUT handler
-        handler = logging.FileHandler("client.log")
+        handler = logging.FileHandler("Logs/client.log")
         handler.setLevel(level)
         
         #Create formatter
@@ -243,8 +249,14 @@ class BotLog:
         # Formatted logger output
         fmt = "%(asctime)s | %(name)s[%(process)d] %(levelname)s: %(message)s"
         
+        #If Logs directory does not exist
+        try:
+            os.mkdir("Logs")
+        except OSError:
+            pass
+        
         #Create STDOUT handler
-        handler = logging.FileHandler("internal-discord.log")
+        handler = logging.FileHandler("Logs/internal-discord.log")
         handler.setLevel(level)
         
         #Create formatter

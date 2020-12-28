@@ -1,7 +1,8 @@
 .venv
 .vscode
 .env
-activateEnv.bat
+activate.bat
+deactivate.bat
 __pycache__
 startBot.bat
 zTests.py
